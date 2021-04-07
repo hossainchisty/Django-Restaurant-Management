@@ -53,3 +53,15 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
+
+class Table(models.Model):
+    name = models.CharField(max_length=200, null=True, blank=True)
+    email = models.EmailField(max_length=200, null=True, blank=True)
+    phone = models.CharField(max_length=200, null=True, blank=True)
+    date = models.DateField(auto_now_add=True, null=True, blank=True)
+    time = models.TimeField(auto_now_add=True, null=True, blank=True)
+    people = models.CharField(max_length=10000, null=True, blank=True)
+    message = models.TextField(null=True,blank=True)
+
+    def __str__(self):
+        return self.name
