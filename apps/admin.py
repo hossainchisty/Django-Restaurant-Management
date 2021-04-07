@@ -21,6 +21,9 @@ class ContactAdmin(admin.ModelAdmin):
     list_display =  ('name','email','subject','message','date')
 
 
+
+
+admin.site.register(Table)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(chefs, chefsAdmin)
 admin.site.register(specialty,  specialtyAdmin)
